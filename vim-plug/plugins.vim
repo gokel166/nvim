@@ -17,8 +17,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     
     "Neovim Themes
     Plug 'joshdick/onedark.vim'
+    Plug 'NLKNguyen/papercolor-theme'
+    Plug 'morhetz/gruvbox'
 
     "vim golang highlight
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 
     call plug#end()
