@@ -14,5 +14,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'scrooloose/NERDTree'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
+    
+    "Neovim Themes
+    Plug 'joshdick/onedark.vim'
 
-call plug#end()
+    "vim golang highlight
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+    call plug#end()
