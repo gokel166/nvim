@@ -43,4 +43,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "startify for project managment
     Plug 'mhinz/vim-startify'
 
+    "airline
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+
     call plug#end()
