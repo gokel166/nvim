@@ -10,3 +10,4 @@ source $HOME/.config/nvim/themes/gruvbox_night.vim
 "Other configs
 source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
+source $HOME/.config/nvim/plug-config/commentary.vim
