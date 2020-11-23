@@ -58,8 +58,31 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     "snippets for coding faster
     Plug 'honza/vim-snippets'
+    
+    if exists('g:vscode')
+      "Easy motion for VSCode
+      "Plug 'asvetliakov/vim-easymotion'
+      Plug 'ChristianChiarulli/vs-code-easymotion'
+      Plug 'machakann/vim-highlightedyank'
+    else
+      "Easymotion
+      Plug 'easymotion/vim-easymotion'
+      Plug 'tpope/vim-surround'
 
-    "nvocde settings
+      " Debugging
+      Plug 'puremourning/vimspector'
+      Plug 'szw/vim-maximizer'
+    
+      " Better Syntax Support
+      Plug 'sheerun/vim-polyglot'
+
+      " auto set indent settings
+      Plug 'tpope/vim-sleuth'
+
+
+    endif
+
+      "nvocde settings
     "Plug 'christianchiarulli/nvcode-color-schemes.vim'
     
     "Plug 'nvim-treesitter/nvim-treesitter'
