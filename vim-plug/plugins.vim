@@ -32,4 +32,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Add tsserver 
     Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
+    "Add fzf and vim rooter
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+    Plug 'airblade/vim-rooter'
+
     call plug#end()
