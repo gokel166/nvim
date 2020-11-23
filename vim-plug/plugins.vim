@@ -29,5 +29,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Keeping up to date with master
     Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
+    "Add tsserver 
+    Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
     call plug#end()
