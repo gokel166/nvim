@@ -102,7 +102,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
       " Interactive code
       Plug 'metakirby5/codi.vim'
 
-
+      " See what keys do like in emacs
+      Plug 'liuchengxu/vim-which-key'
 
 
     endif

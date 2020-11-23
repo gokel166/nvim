@@ -37,6 +37,7 @@ else
   source $HOME/.config/nvim/plug-config/neovide.vim
   source $HOME/.config/nvim/plug-config/closetags.vim
   source $HOME/.config/nvim/plug-config/far.vim
+  source $HOME/.config/nvim/keys/which-key.vim
   "source $HOME/.config/nvim/plug-config/better-whitespace.vim
 
 
