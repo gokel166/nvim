@@ -80,6 +80,7 @@
   "pyright.disableOrganizeImports": false,
 
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 
   "languageserver": {
     "lua": {

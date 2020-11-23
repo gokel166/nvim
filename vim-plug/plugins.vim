@@ -56,4 +56,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Sneak
     Plug 'justinmk/vim-sneak'
 
+    "snippets for coding faster
+    Plug 'honza/vim-snippets'
+
     call plug#end()
