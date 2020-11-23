@@ -86,6 +86,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
       " Terminal
       Plug 'voldikss/vim-floaterm'
       
+      "Rainbow
+      Plug 'junegunn/rainbow_parentheses.vim'
+      
       " Cool Icons
       Plug 'kyazdani42/nvim-web-devicons'
       Plug 'ryanoasis/vim-devicons'
@@ -105,6 +108,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
       " See what keys do like in emacs
       Plug 'liuchengxu/vim-which-key'
 
+      
+      "Color themes
+      Plug 'ayu-theme/ayu-vim' " or other package manager
+      Plug 'junegunn/seoul256.vim'
+      Plug 'nightsense/carbonized'
 
     endif
 

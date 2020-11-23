@@ -16,8 +16,11 @@ if exists('g:vscode')
 else
   "Themes
   "source $HOME/.config/nvim/themes/onedark.vim
-  "source $HOME/.config/nvim/themes/gruvbox.vim
-  source $HOME/.config/nvim/themes/gruvbox_night.vim
+  source $HOME/.config/nvim/themes/gruvbox_light.vim
+  "source $HOME/.config/nvim/themes/gruvbox_night.vim
+  "source $HOME/.config/nvim/themes/ayu_theme.vim
+  "source $HOME/.config/nvim/themes/seoul.vim
+  "source $HOME/.config/nvim/themes/carbonized_light.vim
   source $HOME/.config/nvim/themes/airline.vim
 
 

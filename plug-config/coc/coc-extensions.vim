@@ -1,4 +1,5 @@
 let g:coc_global_extensions = [
+  \ 'coc-omnisharp',
   \ 'coc-snippets',
   \ 'coc-actions',
   \ 'coc-sh',
