@@ -113,6 +113,17 @@ call plug#begin('~/.config/nvim/autoload/plugged')
       Plug 'ayu-theme/ayu-vim' " or other package manager
       Plug 'junegunn/seoul256.vim'
       Plug 'nightsense/carbonized'
+      
+      "Barbar tabline plugin
+      "Plug 'romgrk/barbar.nvim'
+      " async tasks
+      Plug 'skywind3000/asynctasks.vim'
+      Plug 'skywind3000/asyncrun.vim'
+
+
+      " Swap windows
+      Plug 'wesQ3/vim-windowswap'
+
 
     endif
 
