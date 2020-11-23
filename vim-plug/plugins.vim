@@ -59,4 +59,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "snippets for coding faster
     Plug 'honza/vim-snippets'
 
+    "nvocde settings
+    "Plug 'christianchiarulli/nvcode-color-schemes.vim'
+    
+    "Plug 'nvim-treesitter/nvim-treesitter'
+    "Plug 'nvim-treesitter/playground'
+
+    "Plug 'neovim/nvim-lspconfig'
+
     call plug#end()

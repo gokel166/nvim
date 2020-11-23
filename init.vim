@@ -18,3 +18,8 @@ source $HOME/.config/nvim/plug-config/sneak.vim
 
 "VSCode
 source $HOME/.config/nvim/vscode/settings.vim
+
+"Lua
+"luafile $HOME/.config/nvim/lua/nvcodeline.lua
+"luafile $HOME/.config/nvim/lua/treesitter.lua
+"luafile $HOME/.config/nvim/lua/plug-colorizer.lua
