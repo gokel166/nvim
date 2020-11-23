@@ -15,3 +15,6 @@ source $HOME/.config/nvim/plug-config/commentary.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/signify.vim
 source $HOME/.config/nvim/plug-config/sneak.vim
+
+"VSCode
+source $HOME/.config/nvim/vscode/settings.vim
