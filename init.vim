@@ -4,5 +4,8 @@ source $HOME/.config/nvim/keys/mappings.vim
 
 "Themes
 "source $HOME/.config/nvim/themes/onedark.vim
-source $HOME/.config/nvim/themes/gruvbox.vim
+"source $HOME/.config/nvim/themes/gruvbox.vim
+source $HOME/.config/nvim/themes/gruvbox_night.vim
 
+"Other configs
+source $HOME/.config/nvim/plug-config/coc.vim

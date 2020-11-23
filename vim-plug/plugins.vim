@@ -23,5 +23,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "vim golang highlight
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+    " Stable version of coc
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+    " Keeping up to date with master
+    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+
 
     call plug#end()
