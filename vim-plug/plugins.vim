@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Better Syntax Support
-    Plug 'sheerun/vim-polyglot'
+    "Plug 'sheerun/vim-polyglot'
     " File Explorer
     Plug 'scrooloose/NERDTree'
     " Auto pairs for '(' '[' '{'
@@ -49,10 +49,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     "git integration support
     Plug 'mhinz/vim-signify'
-    Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-rhubarb'
-    Plug 'junegunn/gv.vim'
-    
+        
     "Sneak
     Plug 'justinmk/vim-sneak'
 
@@ -78,6 +75,34 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
       " auto set indent settings
       Plug 'tpope/vim-sleuth'
+
+      " Git
+      Plug 'airblade/vim-gitgutter'
+      Plug 'rhysd/git-messenger.vim'
+      Plug 'tpope/vim-fugitive'
+      Plug 'tpope/vim-rhubarb'
+      Plug 'junegunn/gv.vim'
+
+      " Terminal
+      Plug 'voldikss/vim-floaterm'
+      
+      " Cool Icons
+      Plug 'kyazdani42/nvim-web-devicons'
+      Plug 'ryanoasis/vim-devicons'
+
+      " Closetags
+      Plug 'alvan/vim-closetag'
+
+      " Find and replace
+      Plug 'ChristianChiarulli/far.vim'
+
+      " Smooth scroll
+      Plug 'psliwka/vim-smoothie'
+
+      " Interactive code
+      Plug 'metakirby5/codi.vim'
+
+
 
 
     endif

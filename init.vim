@@ -22,12 +22,22 @@ else
 
 
   "Other configs
-  source $HOME/.config/nvim/plug-config/coc.vim
+  source $HOME/.config/nvim/plug-config/coc/coc.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
   source $HOME/.config/nvim/plug-config/commentary.vim
   source $HOME/.config/nvim/plug-config/start-screen.vim
   source $HOME/.config/nvim/plug-config/signify.vim
   source $HOME/.config/nvim/plug-config/sneak.vim
+  source $HOME/.config/nvim/plug-config/coc/coc-extensions.vim
+  source $HOME/.config/nvim/plug-config/better-whitespace.vim
+
+
+  source $HOME/.config/nvim/plug-config/floaterm.vim
+  source $HOME/.config/nvim/plug-config/codi.vim
+  source $HOME/.config/nvim/plug-config/neovide.vim
+  source $HOME/.config/nvim/plug-config/closetags.vim
+  source $HOME/.config/nvim/plug-config/far.vim
+  "source $HOME/.config/nvim/plug-config/better-whitespace.vim
 
 
 endif
@@ -38,6 +48,8 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 if !empty(glob("~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
+
+source $HOME/.config/nvim/plug-config/quickscope.vim
 
 " Better nav for omnicomplete TODO figure out why this is being overridden
 inoremap <expr> <c-j> ("\<C-n>")
