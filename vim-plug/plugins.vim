@@ -40,4 +40,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "vim commentary
     Plug 'tpope/vim-commentary'
 
+    "startify for project managment
+    Plug 'mhinz/vim-startify'
+
     call plug#end()
