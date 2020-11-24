@@ -33,6 +33,7 @@ else
   source $HOME/.config/nvim/plug-config/sneak.vim
   source $HOME/.config/nvim/plug-config/coc/coc-extensions.vim
   source $HOME/.config/nvim/plug-config/better-whitespace.vim
+  source $HOME/.config/nvim/plug-config/vim-rooter.vim
 
 
   source $HOME/.config/nvim/plug-config/floaterm.vim
