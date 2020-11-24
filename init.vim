@@ -60,7 +60,8 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
-
+"Disables automatic commenting on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=0
 "Lua
 "luafile $HOME/.config/nvim/lua/nvcodeline.lua
 "luafile $HOME/.config/nvim/lua/treesitter.lua
