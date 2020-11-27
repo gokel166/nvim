@@ -130,7 +130,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
       "nvocde settings
     "Plug 'christianchiarulli/nvcode-color-schemes.vim'
     
-    "Plug 'nvim-treesitter/nvim-treesitter'
     "Plug 'nvim-treesitter/playground'
 
     "Plug 'neovim/nvim-lspconfig'

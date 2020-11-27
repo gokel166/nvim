@@ -82,13 +82,20 @@
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 
-  "languageserver": {
-    "lua": {
-      "command": "/home/chris/.luambenvs/neovim4/bin/lua-lsp",
-      "filetypes": ["lua"],
-      "trace.server": "verbose"
-    }
-  },
+  //"languageserver": {
+  //  "lua": {
+  //    "command": "/home/chris/.luambenvs/neovim4/bin/lua-lsp",
+  //    "filetypes": ["lua"],
+  //    "trace.server": "verbose"
+  //  }
+  //},
+
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
+  "typescript.format.semicolons": "insert",
+  "typescript.suggest.includeAutomaticOptionalChainCompletions": true,
+  "typescript.updateImportsOnFileMove.enable": true,
+  "typescript.suggest.paths": true,
+  "typescript.suggest.autoImports": true,
 
   "bookmark.sign": "",
 

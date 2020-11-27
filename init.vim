@@ -60,6 +60,8 @@ source $HOME/.config/nvim/plug-config/quickscope.vim
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
 "Disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=0
 "Lua
