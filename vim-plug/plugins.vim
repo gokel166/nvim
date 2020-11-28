@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'joshdick/onedark.vim'
     Plug 'NLKNguyen/papercolor-theme'
     Plug 'morhetz/gruvbox'
+    Plug 'ajmwagar/vim-deus'
 
     "vim golang highlight
     Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -123,6 +124,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
       " Swap windows
       Plug 'wesQ3/vim-windowswap'
+
+      " Golang plugin
+      Plug 'fatih/vim-go'
 
 
     endif

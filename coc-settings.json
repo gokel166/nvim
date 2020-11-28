@@ -82,13 +82,13 @@
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 
-  //"languageserver": {
-  //  "lua": {
-  //    "command": "/home/chris/.luambenvs/neovim4/bin/lua-lsp",
-  //    "filetypes": ["lua"],
-  //    "trace.server": "verbose"
-  //  }
-  //},
+  "languageserver": {
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".nvim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  },
 
   "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": true,
   "typescript.format.semicolons": "insert",

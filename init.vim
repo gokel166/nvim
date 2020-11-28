@@ -18,10 +18,14 @@ else
   "source $HOME/.config/nvim/themes/onedark.vim
   "source $HOME/.config/nvim/themes/gruvbox_light.vim
   "source $HOME/.config/nvim/themes/gruvbox_night.vim
-  source $HOME/.config/nvim/themes/ayu_theme.vim
+  "source $HOME/.config/nvim/themes/ayu_theme.vim
+  source $HOME/.config/nvim/themes/deus-thm.vim
   "source $HOME/.config/nvim/themes/seoul.vim
   "source $HOME/.config/nvim/themes/carbonized_light.vim
   "source $HOME/.config/nvim/themes/airline.vim
+
+  " Airline themes
+  source $HOME/.config/nvim/themes/airline-themes/deus-airline-theme.vim
 
 
   "Other configs
