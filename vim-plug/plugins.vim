@@ -114,6 +114,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
       Plug 'ayu-theme/ayu-vim' " or other package manager
       Plug 'junegunn/seoul256.vim'
       Plug 'nightsense/carbonized'
+      Plug 'heraldofsolace/nisha-vim'
+      Plug 'albertorestifo/github.vim'
+      Plug 'aradunovic/perun.vim'
       
       "Barbar tabline plugin
       "Plug 'romgrk/barbar.nvim'
