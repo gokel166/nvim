@@ -12,6 +12,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     "Plug 'sheerun/vim-polyglot'
     " File Explorer
     Plug 'scrooloose/NERDTree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     
@@ -53,6 +56,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
         
     "Sneak
     Plug 'justinmk/vim-sneak'
+
+    "TS Syntax
+    Plug 'HerringtonDarkholme/yats.vim'
 
     "snippets for coding faster
     Plug 'honza/vim-snippets'
