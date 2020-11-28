@@ -17,7 +17,7 @@ else
   "Themes
   "source $HOME/.config/nvim/themes/onedark.vim
   "source $HOME/.config/nvim/themes/gruvbox_light.vim
-  "source $HOME/.config/nvim/themes/gruvbox_night.vim
+  source $HOME/.config/nvim/themes/gruvbox_dark.vim
   "source $HOME/.config/nvim/themes/ayu_theperun-theme.vimm
   "source $HOME/.config/nvim/themes/deus-thm.vim
   "source $HOME/.config/nvim/themes/seoul.vim
@@ -25,7 +25,7 @@ else
   "source $HOME/.config/nvim/themes/airline.vim
   "source $HOME/.config/nvim/themes/nisha-theme.vim
   "source $HOME/.config/nvim/themes/github-theme.vim
-  source $HOME/.config/nvim/themes/perun-theme.vim
+  "source $HOME/.config/nvim/themes/perun-theme.vim
 
   " Airline themes
   source $HOME/.config/nvim/themes/airline-themes/deus-airline-theme.vim
