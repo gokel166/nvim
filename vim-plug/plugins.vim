@@ -187,6 +187,12 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'commit': '3c07232'}
 Plug 'nvim-treesitter/playground'
 Plug 'nvim-lua/completion-nvim'
 
+" Colorizer
+Plug 'norcalli/nvim-colorizer.lua'
+
+" Status Line
+Plug 'glepnir/galaxyline.nvim'
+
 "Plug 'neovim/nvim-lspconfig'
 
 call plug#end()

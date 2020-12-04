@@ -86,9 +86,14 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "Disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=0
 "Lua
-"luafile $HOME/.config/nvim/lua/nvcodeline.lua
-"luafile $HOME/.config/nvim/lua/treesitter.lua
-"luafile $HOME/.config/nvim/lua/plug-colorizer.lua
+luafile $HOME/.config/nvim/lua/nvcodeline.lua
+luafile $HOME/.config/nvim/lua/treesitter.lua
+
+if (has("termguicolors"))
+   set termguicolors
+endif
+
+luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
 " Go configuration
 let g:go_gopls_enable=0
@@ -99,6 +104,5 @@ let g:jedi#completions_enabled = 0
 set formatoptions-=cro
 set cursorline
 hi CursorLine cterm=NONE ctermbg=DarkGray
-
 
 
