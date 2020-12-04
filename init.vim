@@ -18,7 +18,7 @@ else
   "Themes
   "source $HOME/.config/nvim/themes/onedark.vim
   "source $HOME/.config/nvim/themes/gruvbox_light.vim
-  "source $HOME/.config/nvim/themes/gruvbox_dark.vim
+  source $HOME/.config/nvim/themes/gruvbox_dark.vim
   "source $HOME/.config/nvim/themes/ayu_theperun-theme.vim
   "source $HOME/.config/nvim/themes/deus-thm.vim
   "source $HOME/.config/nvim/themes/seoul.vim
