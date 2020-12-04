@@ -1,150 +1,171 @@
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   "autocmd VimEnter * PlugInstall
   "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-    " Better Syntax Support
-    "Plug 'sheerun/vim-polyglot'
-    " File Explorer
-    Plug 'scrooloose/NERDTree'
-    Plug 'Xuyuanp/nerdtree-git-plugin'
-    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Better Syntax Support
+"Plug 'sheerun/vim-polyglot'
+" File Explorer
+Plug 'scrooloose/NERDTree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
-    " Auto pairs for '(' '[' '{'
-    Plug 'jiangmiao/auto-pairs'
-    
-    "Neovim Themes
-    Plug 'joshdick/onedark.vim'
-    Plug 'NLKNguyen/papercolor-theme'
-    Plug 'morhetz/gruvbox'
-    Plug 'ajmwagar/vim-deus'
+" Auto pairs for '(' '[' '{'
+Plug 'jiangmiao/auto-pairs'
 
-    "vim golang highlight
-    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Neovim Themes
+Plug 'joshdick/onedark.vim'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'morhetz/gruvbox'
+Plug 'ajmwagar/vim-deus'
 
-    " Stable version of coc
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"vim golang highlight
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-    " Keeping up to date with master
-    Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+" Stable version of coc
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    "Add tsserver 
-    Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+" Keeping up to date with master
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
-    "Add fzf and vim rooter
-    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-    Plug 'junegunn/fzf.vim'
-    Plug 'airblade/vim-rooter'
+"Add tsserver
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 
-    "vim commentary
-    Plug 'tpope/vim-commentary'
+"Add fzf and vim rooter
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
+Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release', 'do': ':UpdateRemotePlugins' }
 
-    "startify for project managment
-    Plug 'mhinz/vim-startify'
+"Align
+Plug 'junegunn/vim-easy-align'
 
-    "airline
-    Plug 'vim-airline/vim-airline'
-    Plug 'vim-airline/vim-airline-themes'
+"vim commentary
+Plug 'tpope/vim-commentary'
 
-    "git integration support
-    Plug 'mhinz/vim-signify'
-        
-    "Sneak
-    Plug 'justinmk/vim-sneak'
+"startify for project managment
+Plug 'mhinz/vim-startify'
 
-    "TS Syntax
-    Plug 'HerringtonDarkholme/yats.vim'
+"airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
-    "snippets for coding faster
-    Plug 'honza/vim-snippets'
-    
-    if exists('g:vscode')
-      "Easy motion for VSCode
-      "Plug 'asvetliakov/vim-easymotion'
-      Plug 'ChristianChiarulli/vs-code-easymotion'
-      Plug 'machakann/vim-highlightedyank'
-    else
-      "Easymotion
-      Plug 'easymotion/vim-easymotion'
-      Plug 'tpope/vim-surround'
+"Formatter
+"Plug 'Chiel92/vim-autoformat'
 
-      " Debugging
-      Plug 'puremourning/vimspector'
-      Plug 'szw/vim-maximizer'
-    
-      " Better Syntax Support
-      Plug 'sheerun/vim-polyglot'
+"git integration support
+Plug 'mhinz/vim-signify'
 
-      " auto set indent settings
-      Plug 'tpope/vim-sleuth'
+"Sneak
+Plug 'justinmk/vim-sneak'
 
-      " Git
-      Plug 'airblade/vim-gitgutter'
-      Plug 'rhysd/git-messenger.vim'
-      Plug 'tpope/vim-fugitive'
-      Plug 'tpope/vim-rhubarb'
-      Plug 'junegunn/gv.vim'
+"TS Syntax
+Plug 'HerringtonDarkholme/yats.vim'
 
-      " Terminal
-      Plug 'voldikss/vim-floaterm'
-      
-      "Rainbow
-      Plug 'junegunn/rainbow_parentheses.vim'
-      
-      " Cool Icons
-      Plug 'kyazdani42/nvim-web-devicons'
-      Plug 'ryanoasis/vim-devicons'
+"Deoplete jedi
+Plug 'deoplete-plugins/deoplete-jedi'
 
-      " Closetags
-      Plug 'alvan/vim-closetag'
+"snippets for coding faster
+Plug 'honza/vim-snippets'
 
-      " Find and replace
-      Plug 'ChristianChiarulli/far.vim'
+if exists('g:vscode')
+  "Easy motion for VSCode
+  "Plug 'asvetliakov/vim-easymotion'
+  Plug 'ChristianChiarulli/vs-code-easymotion'
+  Plug 'machakann/vim-highlightedyank'
+else
+  "Easymotion
+  Plug 'easymotion/vim-easymotion'
+  Plug 'tpope/vim-surround'
 
-      " Smooth scroll
-      Plug 'psliwka/vim-smoothie'
+  " Debugging
+  Plug 'puremourning/vimspector'
+  Plug 'szw/vim-maximizer'
 
-      " Interactive code
-      Plug 'metakirby5/codi.vim'
+  " Better Syntax Support
+  Plug 'sheerun/vim-polyglot'
 
-      " See what keys do like in emacs
-      Plug 'liuchengxu/vim-which-key'
+  " auto set indent settings
+  Plug 'tpope/vim-sleuth'
 
-      
-      "Color themes
-      Plug 'ayu-theme/ayu-vim' " or other package manager
-      Plug 'junegunn/seoul256.vim'
-      Plug 'nightsense/carbonized'
-      Plug 'heraldofsolace/nisha-vim'
-      Plug 'albertorestifo/github.vim'
-      Plug 'aradunovic/perun.vim'
-      
-      "Barbar tabline plugin
-      "Plug 'romgrk/barbar.nvim'
-      " async tasks
-      Plug 'skywind3000/asynctasks.vim'
-      Plug 'skywind3000/asyncrun.vim'
+  " Git
+  Plug 'airblade/vim-gitgutter'
+  Plug 'rhysd/git-messenger.vim'
+  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-rhubarb'
+  Plug 'junegunn/gv.vim'
+
+  " Terminal
+  Plug 'voldikss/vim-floaterm'
+
+  "Rainbow
+  Plug 'junegunn/rainbow_parentheses.vim'
+
+  " Cool Icons
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'ryanoasis/vim-devicons'
+
+  " Closetags
+  Plug 'alvan/vim-closetag'
+
+  " Find and replace
+  Plug 'ChristianChiarulli/far.vim'
+
+  " Smooth scroll
+  Plug 'psliwka/vim-smoothie'
+
+  " Interactive code
+  Plug 'metakirby5/codi.vim'
+
+  " See what keys do like in emacs
+  Plug 'liuchengxu/vim-which-key'
 
 
-      " Swap windows
-      Plug 'wesQ3/vim-windowswap'
+  "Color themes
+  Plug 'ayu-theme/ayu-vim' " or other package manager
+  Plug 'junegunn/seoul256.vim'
+  Plug 'nightsense/carbonized'
+  Plug 'heraldofsolace/nisha-vim'
+  Plug 'albertorestifo/github.vim'
+  Plug 'aradunovic/perun.vim'
 
-      " Golang plugin
-      Plug 'fatih/vim-go'
+  "Barbar tabline plugin
+  "Plug 'romgrk/barbar.nvim'
+  " async tasks
+  Plug 'skywind3000/asynctasks.vim'
+  Plug 'skywind3000/asyncrun.vim'
+
+  "Ranger plugin
+  Plug 'rbgrouleff/bclose.vim'
+
+  " Swap windows
+  Plug 'wesQ3/vim-windowswap'
+
+  "      if has('nvim')
+  "        Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  "      else
+  "        Plug 'Shougo/deoplete.nvim'
+  "        Plug 'roxma/nvim-yarp'
+  "        Plug 'roxma/vim-hug-neovim-rpc'
+  "      endif
+  "        let g:deoplete#enable_at_startup = 1
+
+  " Golang plugin
+  Plug 'fatih/vim-go'
 
 
-    endif
+endif
 
-      "nvocde settings
-    "Plug 'christianchiarulli/nvcode-color-schemes.vim'
-    
-    "Plug 'nvim-treesitter/playground'
+"nvocde settings
+"Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
-    "Plug 'neovim/nvim-lspconfig'
+"Plug 'nvim-treesitter/playground'
 
-    call plug#end()
+"Plug 'neovim/nvim-lspconfig'
+
+call plug#end()
