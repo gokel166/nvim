@@ -18,11 +18,20 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Auto pairs for '(' '[' '{'
 Plug 'jiangmiao/auto-pairs'
 
+"Multiple Cursors
+Plug 'terryma/vim-multiple-cursors'
+
 "Neovim Themes
 Plug 'joshdick/onedark.vim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'morhetz/gruvbox'
 Plug 'ajmwagar/vim-deus'
+
+"Neo format
+Plug 'sbdchd/neoformat'
+
+"Jedi
+Plug 'davidhalter/jedi-vim'
 
 "vim golang highlight
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }

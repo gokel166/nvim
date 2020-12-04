@@ -53,7 +53,11 @@ else
   source $HOME/.config/nvim/plug-config/far.vim
   source $HOME/.config/nvim/plug-config/ranger-conf.vim
   source $HOME/.config/nvim/keys/which-key.vim
+
+  source $HOME/.config/nvim/plug-config/jedi-conf.vim
   
+  source $HOME/.config/nvim/plug-config/neoformat-conf.vim
+
   "source $HOME/.config/nvim/plug-config/better-whitespace.vim
 
   "source $HOME/.config/nvim/plug-config/kite-config.vim
