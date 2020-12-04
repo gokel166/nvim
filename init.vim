@@ -106,3 +106,27 @@ set cursorline
 hi CursorLine cterm=NONE ctermbg=DarkGray
 
 
+" Use completion-nvim in every buffer
+"autocmd BufEnter * lua require'completion'.on_attach()
+
+"Lua configurations for queries and language support
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = { "c" },  -- list of language that will be disabled
+  },
+}
+EOF
+
+
+"Completion matching strategy
+let g:completion_sorting="length"
+
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
+let g:completion_matching_smart_case = 1
+let g:completion_trigger_character = ['.', '::']
+let g:completion_trigger_on_delete = 1
+let g:completion_timer_cycle = 200
