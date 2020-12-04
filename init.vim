@@ -111,19 +111,22 @@ hi CursorLine cterm=NONE ctermbg=DarkGray
 
 "Lua configurations for queries and language support
 
-lua <<EOF
+:lua <<EOF
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   highlight = {
     enable = true,              -- false will disable the whole extension
-    disable = { "c" },  -- list of language that will be disabled
+    disable = { },  -- list of language that will be disabled ex 
   },
 }
 EOF
 
 
+
 "Completion matching strategy
 let g:completion_sorting="length"
+
+let g:completion_enable_auto_paren = 1
 
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy', 'all']
 let g:completion_matching_smart_case = 1
