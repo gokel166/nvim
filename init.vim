@@ -93,9 +93,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=0
 " Go configuration
 let g:go_gopls_enable=0
 
-" Powerline fonts
-let g:airline_powerline_fonts=1
-
 "Pycompletions
 let g:jedi#completions_enabled = 0
 

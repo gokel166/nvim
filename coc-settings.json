@@ -48,6 +48,8 @@
   ],
   "coc.preferences.hoverTarget": "float",
 
+  "coc.preferences.colorSupport": true,
+
   "pairs.enableCharacters": ["(", "[", "{", "<", "'", "\"", "`"],
 
   "pairs.enableBackspace": true,
