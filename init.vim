@@ -3,7 +3,6 @@ if exists('g:vscode')
   source $HOME/.config/nvim/plug-config/polyglot.vim
 endif
 
-
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
@@ -68,6 +67,7 @@ else
 
 endif
 
+lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
 source $HOME/.config/nvim/plug-config/quickscope.vim
 
 " Add paths to node and python here

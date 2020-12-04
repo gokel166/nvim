@@ -1,3 +1,12 @@
+" Get absolute path of the directory of the current file
+let s:init_vim_dir = expand('<sfile>:p:h')
+let s:nvim_version = api_info().version
+"if s:nvim_version.minor == 5
+"        execute("source " . s:init_vim_dir . "/nightly.vim")
+"else
+"        execute("source " . s:init_vim_dir . "/stable.vim")
+"endif
+
 " auto-install vim-plug
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
@@ -172,8 +181,11 @@ endif
 
 "nvocde settings
 "Plug 'christianchiarulli/nvcode-color-schemes.vim'
-
-"Plug 'nvim-treesitter/playground'
+Plug 'neovim/nvim-lspconfig'
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', { 'commit': '3c07232'}
+Plug 'nvim-treesitter/playground'
+Plug 'nvim-lua/completion-nvim'
 
 "Plug 'neovim/nvim-lspconfig'
 
