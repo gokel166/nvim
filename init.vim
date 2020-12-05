@@ -65,6 +65,10 @@ else
   source $HOME/.config/nvim/fontconfig/powerline-conf.vim
 
 
+  "Config for Lang Server Client
+  source $HOME/.config/nvim/langserv-config/go-pls.vim
+
+
 endif
 
 lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
@@ -92,6 +96,9 @@ luafile $HOME/.config/nvim/lua/treesitter.lua
 if (has("termguicolors"))
    set termguicolors
 endif
+
+set runtimepath+=~/.vim-plugins/LanguageClient-neovim
+
 
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 
@@ -133,3 +140,22 @@ let g:completion_matching_smart_case = 1
 let g:completion_trigger_character = ['.', '::']
 let g:completion_trigger_on_delete = 1
 let g:completion_timer_cycle = 200
+
+" Language server configs
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'python': ['/home/george/.local/bin/pyls'],
+    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+    \ }
+
+
+
+nmap <F5> <Plug>(lcn-menu)
+" Or map each action separately
+nmap <silent>K <Plug>(lcn-hover)
+nmap <silent> gd <Plug>(lcn-definition)
+nmap <silent> <F2> <Plug>(lcn-rename)
+
+

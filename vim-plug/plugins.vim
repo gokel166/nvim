@@ -195,6 +195,11 @@ Plug 'norcalli/nvim-colorizer.lua'
 " Status Line
 Plug 'glepnir/galaxyline.nvim'
 
+Plug 'autozimu/LanguageClient-neovim', {
+  \ 'branch': 'next',
+  \ 'do': 'bash install.sh'
+  \ }
+
 Plug 'neovim/nvim-lspconfig'
 
 call plug#end()
