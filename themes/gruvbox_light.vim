@@ -10,4 +10,5 @@ set termguicolors
 set bg=light
 colorscheme gruvbox
 
+hi CursorLine cterm=NONE ctermbg=DarkGray
 hi Normal guibg=NONE ctermbg=NONE

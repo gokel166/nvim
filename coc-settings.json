@@ -87,6 +87,8 @@
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/utils/snips"],
   "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
 
+  "flow.useNPMPackagedFlow": true,
+
   "languageserver": {
     "golang": {
       "command": "gopls",

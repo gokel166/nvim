@@ -6,4 +6,5 @@ highlight LineNr ctermfg=LightYellow ctermbg=White
 
 colorscheme gruvbox
 
+hi CursorLine cterm=NONE ctermbg=DarkGray
 hi Normal guibg=NONE ctermbg=NONE

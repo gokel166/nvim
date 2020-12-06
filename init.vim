@@ -16,8 +16,8 @@ if exists('g:vscode')
 else
   "Themes
   "source $HOME/.config/nvim/themes/onedark.vim
-  "source $HOME/.config/nvim/themes/gruvbox_light.vim
-  source $HOME/.config/nvim/themes/gruvbox_dark.vim
+  source $HOME/.config/nvim/themes/gruvbox_light.vim
+  "source $HOME/.config/nvim/themes/gruvbox_dark.vim
   "source $HOME/.config/nvim/themes/ayu_theperun-theme.vim
   "source $HOME/.config/nvim/themes/deus-thm.vim
   "source $HOME/.config/nvim/themes/seoul.vim
@@ -110,8 +110,7 @@ let g:jedi#completions_enabled = 0
 
 set formatoptions-=cro
 set cursorline
-hi CursorLine cterm=NONE ctermbg=DarkGray
-
+"hi CursorLine cterm=NONE ctermbg=DarkGray
 
 " Use completion-nvim in every buffer
 "autocmd BufEnter * lua require'completion'.on_attach()
@@ -129,6 +128,11 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 
+" Setup nvim-lsp
+:lua << END
+  require'lspconfig'.tsserver.setup{}
+  require'lspconfig'.solargraph.setup{}
+END
 
 "Completion matching strategy
 let g:completion_sorting="length"
@@ -142,15 +146,14 @@ let g:completion_trigger_on_delete = 1
 let g:completion_timer_cycle = 200
 
 " Language server configs
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'javascript': ['/usr/local/bin/javascript-typescript-stdio'],
-    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'python': ['/home/george/.local/bin/pyls'],
-    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
-    \ }
+"let g:LanguageClient_serverCommands = {
+"    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+"    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+"    \ 'python': ['/home/george/.local/bin/pyls'],
+"    \ }
 
-
+"flow lang server config
+let g:javascript_plugin_flow = 1
 
 nmap <F5> <Plug>(lcn-menu)
 " Or map each action separately
