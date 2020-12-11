@@ -8,7 +8,6 @@ source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
 source $HOME/.config/nvim/general/functions.vim
 
-
 "VSCode
 if exists('g:vscode')
   source $HOME/.config/nvim/vscode/settings.vim
@@ -16,14 +15,14 @@ if exists('g:vscode')
 else
   "Themes
   "source $HOME/.config/nvim/themes/onedark.vim
-  source $HOME/.config/nvim/themes/gruvbox_light.vim
+  "source $HOME/.config/nvim/themes/gruvbox_light.vim
   "source $HOME/.config/nvim/themes/gruvbox_dark.vim
   "source $HOME/.config/nvim/themes/ayu_theperun-theme.vim
   "source $HOME/.config/nvim/themes/deus-thm.vim
   "source $HOME/.config/nvim/themes/seoul.vim
   "source $HOME/.config/nvim/themes/carbonized_light.vim
   "source $HOME/.config/nvim/themes/airline.vim
-  "source $HOME/.config/nvim/themes/nisha-theme.vim
+  source $HOME/.config/nvim/themes/nisha-theme.vim
   "source $HOME/.config/nvim/themes/github-theme.vim
   "source $HOME/.config/nvim/themes/perun-theme.vim
 
@@ -146,11 +145,16 @@ let g:completion_trigger_on_delete = 1
 let g:completion_timer_cycle = 200
 
 " Language server configs
-"let g:LanguageClient_serverCommands = {
-"    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-"    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-"    \ 'python': ['/home/george/.local/bin/pyls'],
-"    \ }
+
+set rtp+=~/.vim-plugins/LanguageClient-neovim
+
+let g:LanguageClient_serverCommands = {
+    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'python': ['/home/george/.local/bin/pyls'],
+    \ }
+
+
 
 "flow lang server config
 let g:javascript_plugin_flow = 1
