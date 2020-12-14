@@ -1,6 +1,8 @@
 let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
 let g:rainbow_conf = {'guis': ['bold']}
 let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+autocmd FileType * RainbowParentheses
+
 
 " \	'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
 let g:rainbow_conf = {
@@ -33,6 +35,13 @@ let g:rainbow_conf = {
 \		'stylus': {
 \			'parentheses': ['start=/{/ end=/}/ fold contains=@colorableGroup'], 
 \		},
+\		'javascript': {
+\			'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/\v\{\ze[^-]/ end=/}/ fold'],
+\		},
+\		'python': {
+\			'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/\v\{\ze[^-]/ end=/}/ fold'],
+\		},
 \		'css': 0, 
 \	}
 \}
+

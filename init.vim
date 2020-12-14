@@ -1,4 +1,3 @@
-
 if exists('g:vscode')
   source $HOME/.config/nvim/plug-config/polyglot.vim
 endif
@@ -15,23 +14,32 @@ if exists('g:vscode')
 else
   "Themes
   "source $HOME/.config/nvim/themes/onedark.vim
+  "source $HOME/.config/nvim/themes/paper-color.vim
   "source $HOME/.config/nvim/themes/gruvbox_light.vim
   "source $HOME/.config/nvim/themes/gruvbox_dark.vim
   "source $HOME/.config/nvim/themes/ayu_theperun-theme.vim
   "source $HOME/.config/nvim/themes/deus-thm.vim
   "source $HOME/.config/nvim/themes/seoul.vim
   "source $HOME/.config/nvim/themes/carbonized_light.vim
+  "source $HOME/.config/nvim/themes/nord-color.vim
   "source $HOME/.config/nvim/themes/airline.vim
-  source $HOME/.config/nvim/themes/nisha-theme.vim
+  "source $HOME/.config/nvim/themes/nisha-theme.vim
   "source $HOME/.config/nvim/themes/github-theme.vim
   "source $HOME/.config/nvim/themes/perun-theme.vim
 
   " Airline themes
-  "source $HOME/.config/nvim/themes/airline-themes/deus-airline-theme.vim
-  source $HOME/.config/nvim/themes/airline-themes/base16-google.vim
+  source $HOME/.config/nvim/themes/airline-themes/deus-airline-theme.vim
+  "source $HOME/.config/nvim/themes/airline-themes/base16-google.vim
 
+  "Highlighter themes
+  "source $HOME/.config/nvim/themes/highligters/main-highighter.vim
+
+  " Colors from custom themes
+  source $HOME/.config/nvim/colors/nvcode.vim
 
   "Other configs
+  "source $HOME/.config/nvim/plug-config/barbar.vim
+  source $HOME/.config/nvim/plug-config/rainbow.vim
   source $HOME/.config/nvim/plug-config/coc/coc.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
   source $HOME/.config/nvim/plug-config/fzf-preview-conf.vim
@@ -165,4 +173,33 @@ nmap <silent>K <Plug>(lcn-hover)
 nmap <silent> gd <Plug>(lcn-definition)
 nmap <silent> <F2> <Plug>(lcn-rename)
 
+"Nvcode config
 
+" configure treesitter
+:lua << EOF
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+  highlight = {
+    enable = true,              -- false will disable the whole extension
+    disable = {},  -- list of language that will be disabled
+  },
+}
+EOF
+
+
+let g:nvcode_termcolors=256
+
+syntax on
+"colorscheme nvcode " Or whatever colorscheme you make
+
+
+" checks if your terminal has 24-bit color support
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
+endif
+
+set guifont=SF\ Mono\ Powerline\ 10
+"set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+set encoding=utf-8
+let g:airline_powerline_fonts = 1

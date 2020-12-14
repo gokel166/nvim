@@ -14,7 +14,7 @@ local colors = {
   purple = '#5d4d7a',
   magenta = '#d16d9e',
   grey = '#c0c0c0',
-  blue = '#569CD6',
+  blue = '#194365',
   red = '#D16969'
 }
 
@@ -269,3 +269,5 @@ gls.short_line_left[1] = {
 --   autocmd!
 --   autocmd ColorScheme * call s:my_bookmark_color()
 -- augroup END
+
+

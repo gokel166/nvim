@@ -14,7 +14,7 @@ local colors = {
   purple = '#5d4d7a',
   magenta = '#d16d9e',
   grey = '#c0c0c0',
-  blue = '#569CD6',
+  blue = '#2C5B90',
   red = '#D16969'
 }
 
@@ -25,29 +25,30 @@ local buffer_not_empty = function()
   return false
 end
 
--- gls.left[1] = {
---   FirstElement = {
---     -- provider = function() return '▋' end,
---     provider = function() return ' ' end,
---     highlight = {colors.bg,colors.bg}
---   },
--- }
--- gls.left[2] = {
---   ViMode = {
---     provider = function()
---       local alias = {n = 'NORMAL',i = 'INSERT',c= 'COMMAND',V= 'VISUAL', [''] = 'VISUAL'}
---       return alias[vim.fn.mode()]
---     end,
---     separator = ' ',
---     separator_highlight = {colors.yellow,function()
---       if not buffer_not_empty() then
---         return colors.purple
---       end
---       return colors.purple
---     end},
---     highlight = {colors.grey,colors.purple,'bold'},
---   },
--- }
+ gls.left[1] = {
+   FirstElement = {
+     -- provider = function() return '▋' end,
+     provider = function() return ' ' end,
+     highlight = {colors.bg,colors.bg}
+   },
+ }
+ gls.left[2] = {
+   ViMode = {
+     provider = function()
+       local alias = {n = 'NORMAL',i = 'INSERT',c= 'COMMAND',V= 'VISUAL', [''] = 'VISUAL'}
+       return alias[vim.fn.mode()]
+     end,
+     separator = ' ',
+     separator_highlight = {colors.yellow,function()
+       if not buffer_not_empty() then
+         return colors.purple
+       end
+       return colors.purple
+     end},
+     highlight = {colors.grey,colors.purple,'bold'},
+   },
+ }
+
 gls.left[2] = {
   ViMode = {
     provider = function()

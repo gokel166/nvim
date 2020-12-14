@@ -201,5 +201,11 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ }
 
 Plug 'neovim/nvim-lspconfig'
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
+"Nord colorscheme
+Plug 'arcticicestudio/nord-vim'
+
+" MiniMap
+"Plug 'wfxr/minimap.vim'
 call plug#end()

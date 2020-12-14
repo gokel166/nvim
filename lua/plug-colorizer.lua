@@ -11,3 +11,13 @@ require'colorizer'.setup(
 	  css_fn   = true;         -- Enable all CSS *functions*: rgb_fn, hsl_fn
   })
 
+
+
+-- Use the `default_options` as the second parameter, which uses
+-- `foreground` for every mode. This is the inverse of the previous
+-- setup configuration.
+require 'colorizer'.setup({
+  'css';
+  'javascript';
+  html = { mode = 'background' };
+}, { mode = 'foreground' })
