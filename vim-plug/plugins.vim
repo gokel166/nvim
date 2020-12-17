@@ -43,7 +43,7 @@ Plug 'sbdchd/neoformat'
 Plug 'davidhalter/jedi-vim'
 
 "vim golang highlight
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Stable version of coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -174,7 +174,7 @@ else
   "        let g:deoplete#enable_at_startup = 1
 
   " Golang plugin
-  Plug 'fatih/vim-go'
+  "Plug 'fatih/vim-go'
 
 
 endif
