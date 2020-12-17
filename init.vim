@@ -73,7 +73,7 @@ else
 
 
   "Config for Lang Server Client
-  source $HOME/.config/nvim/langserv-config/go-pls.vim
+  "source $HOME/.config/nvim/langserv-config/go-pls.vim
 
 
 endif
@@ -99,6 +99,11 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=0
 "Lua
 luafile $HOME/.config/nvim/lua/nvcodeline.lua
 luafile $HOME/.config/nvim/lua/treesitter.lua
+
+"Microsoft Language Server --- Note this file needs configuration for user and database path for lang server support
+"Check additional notes on github
+"
+"luafile $HOME/.config/nvim/langserv-config/microsoft-lang-serv.lua
 
 if (has("termguicolors"))
    set termguicolors
@@ -159,7 +164,18 @@ set rtp+=~/.vim-plugins/LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'python': ['/home/george/.local/bin/pyls'],
+    \ 'python': '/home/george/.local/bin/pyls',
+    \ 'go': {
+    \   'name': 'gopls',
+    \   'command': ['gopls'],
+    \   'initializationOptions': {
+    \     'usePlaceholders': v:true,
+    \     'codelens': {
+    \       'generate': v:true,
+    \       'test': v:true,
+    \     },
+    \   },
+    \  },
     \ }
 
 
