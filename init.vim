@@ -164,6 +164,7 @@ set rtp+=~/.vim-plugins/LanguageClient-neovim
 let g:LanguageClient_serverCommands = {
     \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
     \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+    \ 'javascript': ['tcp://127.0.0.1:2089'],
     \ 'python': '/home/george/.local/bin/pyls',
     \ 'go': {
     \   'name': 'gopls',
@@ -178,7 +179,13 @@ let g:LanguageClient_serverCommands = {
     \  },
     \ }
 
-
+"JavaScript lang server additional configuration
+let g:LanguageClient_diagnosticsSignsMax=40
+let g:LanguageClient_changeThrottle = 0.8
+let g:LanguageClient_autoStart=1
+let g:LanguageClient_autoStop=1
+let g:LanguageClient_diagnosticsList="on"
+let g:LanguageClient_hoverMarginSize = 0
 
 "flow lang server config
 let g:javascript_plugin_flow = 1
