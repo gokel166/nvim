@@ -33,7 +33,6 @@ else
 
   "Highlighter themes
   "source $HOME/.config/nvim/themes/highligters/main-highighter.vim
-
   " Colors from custom themes
   source $HOME/.config/nvim/colors/nvcode.vim
 
@@ -226,3 +225,12 @@ set guifont=SF\ Mono\ Powerline\ 10
 "set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 set encoding=utf-8
 let g:airline_powerline_fonts = 1
+
+"set column limit
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=0
+
+
+"clear vim registers
+command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+autocmd VimEnter * WipeReg
