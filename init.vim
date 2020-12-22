@@ -2,6 +2,8 @@ if exists('g:vscode')
   source $HOME/.config/nvim/plug-config/polyglot.vim
 endif
 
+let g:coc_node_path = trim(system('which node'))
+
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
 source $HOME/.config/nvim/keys/mappings.vim
@@ -16,7 +18,7 @@ else
   "source $HOME/.config/nvim/themes/onedark.vim
   "source $HOME/.config/nvim/themes/paper-color.vim
   "source $HOME/.config/nvim/themes/gruvbox_light.vim
-  "source $HOME/.config/nvim/themes/gruvbox_dark.vim
+  source $HOME/.config/nvim/themes/gruvbox_dark.vim
   "source $HOME/.config/nvim/themes/ayu_theperun-theme.vim
   "source $HOME/.config/nvim/themes/deus-thm.vim
   "source $HOME/.config/nvim/themes/seoul.vim
@@ -28,13 +30,13 @@ else
   "source $HOME/.config/nvim/themes/perun-theme.vim
 
   " Airline themes
-  source $HOME/.config/nvim/themes/airline-themes/deus-airline-theme.vim
+  "source $HOME/.config/nvim/themes/airline-themes/deus-airline-theme.vim
   "source $HOME/.config/nvim/themes/airline-themes/base16-google.vim
 
   "Highlighter themes
   "source $HOME/.config/nvim/themes/highligters/main-highighter.vim
   " Colors from custom themes
-  source $HOME/.config/nvim/colors/nvcode.vim
+  "source $HOME/.config/nvim/colors/nvcode.vim
 
   "Other configs
   "source $HOME/.config/nvim/plug-config/barbar.vim
@@ -64,6 +66,7 @@ else
   source $HOME/.config/nvim/plug-config/neoformat-conf.vim
 
   "source $HOME/.config/nvim/plug-config/better-whitespace.vim
+  source $HOME/.config/nvim/plug-config/tmux-nav.vim 
 
   "source $HOME/.config/nvim/plug-config/kite-config.vim
 
@@ -77,7 +80,15 @@ else
 
 endif
 
-lua require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
+
+"Lua
+luafile $HOME/.config/nvim/lua/nvcodeline.lua
+luafile $HOME/.config/nvim/lua/treesitter.lua
+luafile $HOME/.config/nvim/lua/jsx_hl.lua
+luafile $HOME/.config/nvim/langserv-config/loc-servers-conf.lua
+
+
+source $HOME/.config/nvim/plug-config/vimlsp_mapping.vim
 source $HOME/.config/nvim/plug-config/quickscope.vim
 
 " Add paths to node and python here
@@ -95,9 +106,9 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 "Disables automatic commenting on newline
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=0
-"Lua
-luafile $HOME/.config/nvim/lua/nvcodeline.lua
-luafile $HOME/.config/nvim/lua/treesitter.lua
+
+"gopls neo-vim config
+source $HOME/.config/nvim/plug-config/gopls-conf.vim
 
 "Microsoft Language Server --- Note this file needs configuration for user and database path for lang server support
 "Check additional notes on github
@@ -127,6 +138,9 @@ set cursorline
 "autocmd BufEnter * lua require'completion'.on_attach()
 
 "Lua configurations for queries and language support
+"vim.cmd('packadd nvim-lspconfig')  -- If installed as a Vim "package".
+"require'lspconfig'.<config>.setup{name=…, settings = {…}, …}
+
 
 :lua <<EOF
 require'nvim-treesitter.configs'.setup {
@@ -139,11 +153,6 @@ require'nvim-treesitter.configs'.setup {
 EOF
 
 
-" Setup nvim-lsp
-:lua << END
-  require'lspconfig'.tsserver.setup{}
-  require'lspconfig'.solargraph.setup{}
-END
 
 "Completion matching strategy
 let g:completion_sorting="length"
@@ -156,38 +165,11 @@ let g:completion_trigger_character = ['.', '::']
 let g:completion_trigger_on_delete = 1
 let g:completion_timer_cycle = 200
 
-" Language server configs
 
-set rtp+=~/.vim-plugins/LanguageClient-neovim
-
-let g:LanguageClient_serverCommands = {
-    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
-    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
-    \ 'javascript': ['tcp://127.0.0.1:2089'],
-    \ 'python': '/home/george/.local/bin/pyls',
-    \ 'go': {
-    \   'name': 'gopls',
-    \   'command': ['gopls'],
-    \   'initializationOptions': {
-    \     'usePlaceholders': v:true,
-    \     'codelens': {
-    \       'generate': v:true,
-    \       'test': v:true,
-    \     },
-    \   },
-    \  },
-    \ }
-
-"JavaScript lang server additional configuration
-let g:LanguageClient_diagnosticsSignsMax=40
-let g:LanguageClient_changeThrottle = 0.8
-let g:LanguageClient_autoStart=1
-let g:LanguageClient_autoStop=1
-let g:LanguageClient_diagnosticsList="on"
-let g:LanguageClient_hoverMarginSize = 0
-
-"flow lang server config
-let g:javascript_plugin_flow = 1
+" Diagnostics for language server
+let g:diagnostic_enable_virtual_text = 0
+let g:diagnostic_show_sign = 0
+let g:diagnostic_enable_underline = 0
 
 nmap <F5> <Plug>(lcn-menu)
 " Or map each action separately
@@ -197,17 +179,12 @@ nmap <silent> <F2> <Plug>(lcn-rename)
 
 "Nvcode config
 
-" configure treesitter
-:lua << EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = {},  -- list of language that will be disabled
-  },
-}
-EOF
 
+"autocmd BufWritePre * .go lua goimports(1000)
+autocmd BufWritePre *.go lua goimports(1000)
+
+"Omnifunc
+autocmd FileType go setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
 let g:nvcode_termcolors=256
 
@@ -232,5 +209,7 @@ highlight ColorColumn ctermbg=0 guibg=0
 
 
 "clear vim registers
-command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+command! WipeReg for i in range(34,322) | silent! call setreg(nr2char(i), []) | endfor
 autocmd VimEnter * WipeReg
+
+

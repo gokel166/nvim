@@ -200,11 +200,13 @@ Plug 'autozimu/LanguageClient-neovim', {
   \ 'do': 'bash install.sh'
   \ }
 
-Plug 'neovim/nvim-lspconfig'
 Plug 'christianchiarulli/nvcode-color-schemes.vim'
 
 "Nord colorscheme
 Plug 'arcticicestudio/nord-vim'
+
+"Tmux navigator
+Plug 'christoomey/vim-tmux-navigator'
 
 " MiniMap
 "Plug 'wfxr/minimap.vim'
