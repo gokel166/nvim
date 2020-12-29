@@ -2,7 +2,7 @@ if exists('g:vscode')
   source $HOME/.config/nvim/plug-config/polyglot.vim
 endif
 
-let g:coc_node_path = trim(system('which node'))
+"let g:coc_node_path = trim(system('which node'))
 
 source $HOME/.config/nvim/vim-plug/plugins.vim
 source $HOME/.config/nvim/general/settings.vim
@@ -17,13 +17,14 @@ else
   "Themes
   "source $HOME/.config/nvim/themes/onedark.vim
   "source $HOME/.config/nvim/themes/paper-color.vim
-  "source $HOME/.config/nvim/themes/gruvbox_light.vim
-  source $HOME/.config/nvim/themes/gruvbox_dark.vim
+  source $HOME/.config/nvim/themes/gruvbox_light.vim
+  "source $HOME/.config/nvim/themes/gruvbox_dark.vim
   "source $HOME/.config/nvim/themes/ayu_theperun-theme.vim
   "source $HOME/.config/nvim/themes/deus-thm.vim
   "source $HOME/.config/nvim/themes/seoul.vim
   "source $HOME/.config/nvim/themes/carbonized_light.vim
   "source $HOME/.config/nvim/themes/nord-color.vim
+  "source $HOME/.config/nvim/themes/aurora-theme.vim
   "source $HOME/.config/nvim/themes/airline.vim
   "source $HOME/.config/nvim/themes/nisha-theme.vim
   "source $HOME/.config/nvim/themes/github-theme.vim
@@ -61,7 +62,7 @@ else
   source $HOME/.config/nvim/plug-config/ranger-conf.vim
   source $HOME/.config/nvim/keys/which-key.vim
 
-  source $HOME/.config/nvim/plug-config/jedi-conf.vim
+  "source $HOME/.config/nvim/plug-config/jedi-conf.vim
   source $HOME/.config/nvim/plug-config/highlight-conf.vim 
   source $HOME/.config/nvim/plug-config/neoformat-conf.vim
 
@@ -128,7 +129,6 @@ luafile $HOME/.config/nvim/lua/plug-colorizer.lua
 let g:go_gopls_enable=0
 
 "Pycompletions
-let g:jedi#completions_enabled = 0
 
 set formatoptions-=cro
 set cursorline
@@ -165,6 +165,10 @@ let g:completion_trigger_character = ['.', '::']
 let g:completion_trigger_on_delete = 1
 let g:completion_timer_cycle = 200
 
+" LangServer configuration
+let g:LanguageClient_serverCommands = {
+  \ 'rust': ['rust-analyzer'],
+  \ }
 
 " Diagnostics for language server
 let g:diagnostic_enable_virtual_text = 0

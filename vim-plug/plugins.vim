@@ -40,7 +40,7 @@ Plug 'ajmwagar/vim-deus'
 Plug 'sbdchd/neoformat'
 
 "Jedi
-Plug 'davidhalter/jedi-vim'
+"Plug 'davidhalter/jedi-vim'
 
 "vim golang highlight
 "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -86,7 +86,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'HerringtonDarkholme/yats.vim'
 
 "Deoplete jedi
-Plug 'deoplete-plugins/deoplete-jedi'
+"Plug 'deoplete-plugins/deoplete-jedi'
 
 "snippets for coding faster
 Plug 'honza/vim-snippets'
@@ -176,7 +176,12 @@ else
   " Golang plugin
   "Plug 'fatih/vim-go'
 
-
+  if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  else
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
+  endif
 endif
 
 "nvocde settings
